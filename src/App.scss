@@ -1,0 +1,105 @@
+@import "~@blueprintjs/core/src/blueprint.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: $pt-navbar-height;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	flex-wrap: wrap;
+}
+
+.custom-card {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.bp3-dark {
+	background-color: $dark-gray3;
+}
+
+.vam {
+	padding-top: 10px;
+}
+
+.lm-20 {
+	margin-left: 20px;
+}
+.rm-20 {
+	margin-right: 20px;
+}
+.tm-20 {
+	margin-top: 20px;
+}
+
+.bp3-drawer {
+	overflow: auto;
+}
+
+.bp3-collapse-body {
+	overflow: auto;
+	max-height: 500px;
+}
+
+.right-nav {
+	width: 15%;
+	float: right;
+}
+
+.left-nav {
+	width: 15%;
+	float: left;
+}
+
+.center-nav {
+	width: 70%;
+}
+
+.auto-marging {
+	margin: auto;
+}
+
+.no-click {
+	// disable clicking inside the video (force disable default controls)
+	pointer-events: none;
+}
+
+.bottom-navbar {
+	overflow: hidden;
+	position: fixed !important;
+	bottom: 0;
+	width: 100%;
+}
+
+.round-card {
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	position: fixed;
+}
+
+.center-bottom {
+	left: 50%;
+	bottom: 10px;
+	transform: translate(-50%, 0%);
+	margin: 0 auto;
+}
+
+.center-top {
+	left: 50%;
+	top: 10px;
+	transform: translate(-50%, 0%);
+	margin: 0 auto;
+}
+
+.border-hover:hover {
+	border: 5px solid rgb(48, 166, 235);
+}
+
+.centering-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
