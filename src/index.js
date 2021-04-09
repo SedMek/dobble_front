@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "localhost:4001";
+// const ENDPOINT = "https://a1869eb1f5fc.ngrok.io/";
 
 console.log("initiating socket connection ...");
 const socket = socketIOClient(ENDPOINT);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App socket={socket}/>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<App socket={socket} />
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

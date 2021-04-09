@@ -1,12 +1,12 @@
 import React from "react";
 import { Button, Intent } from "@blueprintjs/core";
 
-const ResultButton = ({ gameResult }) => {
+const ResultButton = ({ gameStatus }) => {
 	return (
 		<Button
-			intent={gameResult === 1 ? Intent.SUCCESS : Intent.DANGER}
-			text={gameResult === 1 ? "You win, Champion!" : "you lose, Sucker!"}
-			style={{ display: gameResult !== 0 ? "block" : "none" }}
+			intent={gameStatus == "winning" ? Intent.SUCCESS : Intent.DANGER}
+			text={gameStatus == "winning" ? "You win, Champion!" : "you lose, Sucker!"}
+			style={{ display: ["winning", "losing"].includes(gameStatus) ? "block" : "none" }}
 			large
 		/>
 	);

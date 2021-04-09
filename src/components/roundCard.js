@@ -4,7 +4,14 @@ import { Card, Elevation, Intent } from "@blueprintjs/core";
 import Symbol from "./symbol";
 import ResultButton from "./resultButton";
 
-const RoundCard = ({ socket, card, className = [], playable = false, banEndDate = 0, gameResult = 0 }) => {
+const RoundCard = ({
+	socket,
+	card,
+	className = [],
+	playable = false,
+	banEndDate = 0,
+	gameStatus = "waiting",
+}) => {
 	// const url = "http://placekitten.com/83/83/";
 
 	return (
@@ -23,6 +30,7 @@ const RoundCard = ({ socket, card, className = [], playable = false, banEndDate 
 		// 3 symbol version
 		<Card
 			className={[
+				"try",
 				"round-card",
 				"centering-container",
 				...(typeof className === "string" ? [className] : className),
@@ -40,7 +48,7 @@ const RoundCard = ({ socket, card, className = [], playable = false, banEndDate 
 				id={card[0]}
 				playable={playable}
 				banEndDate={banEndDate}
-				display={gameResult === 0}
+				display={!["winning", "losing"].includes(gameStatus)}
 			/>
 			<Symbol
 				socket={socket}
@@ -51,7 +59,7 @@ const RoundCard = ({ socket, card, className = [], playable = false, banEndDate 
 				id={card[1]}
 				playable={playable}
 				banEndDate={banEndDate}
-				display={gameResult === 0}
+				display={!["winning", "losing"].includes(gameStatus)}
 			/>
 			<Symbol
 				socket={socket}
@@ -62,9 +70,9 @@ const RoundCard = ({ socket, card, className = [], playable = false, banEndDate 
 				id={card[2]}
 				playable={playable}
 				banEndDate={banEndDate}
-				display={gameResult === 0}
+				display={!["winning", "losing"].includes(gameStatus)}
 			/>
-			<ResultButton gameResult={gameResult} />
+			<ResultButton gameStatus={gameStatus} />
 		</Card>
 	);
 };

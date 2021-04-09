@@ -1,5 +1,7 @@
 @import "~@blueprintjs/core/src/blueprint.scss";
 
+@import "~@blueprintjs/core/lib/scss/variables";
+
 body {
 	margin: 0;
 	padding: 0;
@@ -73,13 +75,6 @@ body {
 	width: 100%;
 }
 
-.round-card {
-	border-radius: 50%;
-	width: 400px;
-	height: 400px;
-	position: fixed;
-}
-
 .center-bottom {
 	left: 50%;
 	bottom: 10px;
@@ -102,4 +97,21 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.round-card {
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	// background-color: $pt-dark-app-background-color;
+	background-color: #a67908;
+	// ["#FFEEC5", "#F1AEA4", "#D37387", "#A3416E", "#5C255C"]
+	// ["#FFE39F", "#6B9FA1", "#1F4B99"]
+	// ["#FFE4A0", "#D4AD5A", "#A67908"]
+}
+
+.bp3-dark .round-card {
+	// background-color: $pt-app-background-color;
+	background-color: #ffe4a0;
 }
